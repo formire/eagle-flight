@@ -1,7 +1,7 @@
 # Project Name
 Eagle Flight
 
-Test
+
 
 ## What It Does
 The purpose of this app is to provide students with a more affordable opertunity to get to school. When a student request a ride it will locate the clossest student to provide one. 
