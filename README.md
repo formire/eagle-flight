@@ -6,9 +6,12 @@ The purpose of this app is to provide students with a more affordable opertunity
 Ideally, they would be in the same apartment complex or dorm. The reason students would sign up for the app is becasue they are already going to class or the football game, might as well get your gas paid for.  
 
 ## Team Members
-**Rob Ayala-Alicea**- Role/What they're working on - GitHub: @username
+**Rob Ayala-Alicea**- Role/What they're working on - GitHub: formire
+
 **Wil Ivey**- Role/What they're working on - GitHub: TheFroogle
+
 **David Robles**- Role/What they're working on - GitHub: @username
+
 **Diego Davila**- Role/What they're working on - GitHub: @username
 
 ## Setup Instructions
@@ -38,7 +41,14 @@ Instructions for team members
 
 ## Current Status
 **COMPLETED:**
+- README.md
 **TODO:**
+- Server
+    *Handles users requesting a ride as well as which drivers will be assigned to said user*
+- Client
+    *The app that will be used by the user to request and pay for a ride*
+- Dasher
+    *The app for the user who will receive the payment and carpool clients*
 
 ## License
 [Choose a license at choosealicense.com]
