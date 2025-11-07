@@ -1,1 +1,1 @@
-The branch is used to give basic functions or other useful code structures that you may need to use more then one. 
+This branch is used to give basic functions or other useful code structures that you may need to use more then one. 
