@@ -45,12 +45,13 @@ Brief explanation of main folders/files
 ## Current Status
 **COMPLETED:**
 - README.md
+
 **TODO:**
-- Server
+- Server:
     *Handles users requesting a ride as well as which drivers will be assigned to said user*
-- Client
+- Client:
     *The app that will be used by the user to request and pay for a ride*
-- Dasher
+- Driver:
     *The app for the user who will receive the payment and carpool clients*
 
 ## License
