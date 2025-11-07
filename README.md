@@ -17,11 +17,17 @@ How to run your project locally:
 3. etc.
 
 ## Technologies Used
-- Language/Framework
-- Libraries
-- Tools
+**Languages/Framework**
+- HTML
+- CSS
+- JavaScript
+**Libraries**
+- [placeholder]
+**Tools**
+- [placeholder]
 
 ## Project Structure
+*There are currently no folders/files (other than README.md)
 Brief explanation of main folders/files
 
 ## How to Contribute
