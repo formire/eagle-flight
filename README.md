@@ -22,8 +22,10 @@ How to run your project locally:
 - HTML
 - CSS
 - JavaScript
+
 **Libraries**
 - [placeholder]
+
 **Tools**
 - [placeholder]
 
