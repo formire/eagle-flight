@@ -34,10 +34,10 @@ How to run your project locally:
 Brief explanation of main folders/files
 
 ## How to Contribute
-Show up class 
-commit changes 
-debug all code as need
-follow specific assignments when given
+- Show up class 
+- commit changes 
+- debug all code as need
+- follow specific assignments when given
 
 ## Current Status
 **COMPLETED:**
