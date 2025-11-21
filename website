@@ -1,8 +1,18 @@
 <html>
-<head>
-<title>UNT Uber</title>
-</head>
-<body bgcolor=black text=white link=green vlink=blue>
-<h1>UNT Uber</h1>
-<h4>Like Uber, but better</h4>
-</body>
+    <head>
+        <title>UNT Uber</title>
+            <hgroup>
+                <h1><strong><b>UNT Uber</b></strong></h1>
+            </hgroup>
+        </head>
+
+    <body bgcolor=black text=white link=green vlink=blue>
+        <p><i>Like Uber but actually good</i></p>
+        <form>
+    <fieldset>
+        <legend>Sign in (Doesn't actually work yet)</legend>
+        <label>User:</label> <input type="text"> <br>
+        <label>Pass:</label> <input type="text">
+    </fieldset>
+    </body>
+</html>
