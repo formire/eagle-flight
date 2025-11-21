@@ -32,7 +32,7 @@ How to run your project locally:
 - [placeholder]
 
 **Tools**
-- [placeholder]
+Will use style A until the project becomes larger, then transition to style C (Waterfall method)
 
 ## Project Structure
 *There are currently no folders/files (other than README.md)
