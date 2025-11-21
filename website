@@ -2,14 +2,14 @@
     <head>
         <title>UNT Uber</title>
             <hgroup>
-                <h1><strong><b>UNT Uber</b></strong></h1>
+                <h1 style="text-align: center;"><strong><b>UNT Uber</b></strong></h1>
             </hgroup>
         </head>
 
     <body bgcolor=black text=white link=green vlink=blue>
-        <p><i>Like Uber but actually good</i></p>
+        <p style="text-align: center;"><i>Like Uber but actually good</i></p>
         <form>
-    <fieldset>
+    <fieldset style="text-align: center;">
         <legend>Sign in (Doesn't actually work yet)</legend>
         <label>User:</label> <input type="text"> <br>
         <label>Pass:</label> <input type="text">
