@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eagle Flight – Driver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Eagle Flight – Driver</h1>
+
+<div class="card">
+    <h2>Driver Login</h2>
+
+    <label>Driver ID:</label>
+    <input id="driverId" placeholder="driver01">
+
+    <button onclick="registerDriver()">Register</button>
+    <button onclick="goOnline()">Go Online</button>
+    <button onclick="goOffline()">Go Offline</button>
+
+    <p id="status"></p>
+</div>
+
+<div class="card">
+    <h2>Incoming Ride Requests</h2>
+    <div id="rides"></div>
+</div>
+
+<script>
+let driverId = null;
+
+function registerDriver() {
+    driverId = document.getElementById("driverId").value;
+
+    fetch("http://127.0.0.1:5000/api/register_driver", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({driver_id: driverId})
+    })
+    .then(r => r.json())
+    .then(data => {
+        document.getElementById("status").innerText = data.message;
+    });
+}
+
+function goOnline() {
+    fetch("http://127.0.0.1:5000/api/driver_online", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({driver_id: driverId})
+    });
+
+    document.getElementById("status").innerText = "Online";
+    startPolling();
+}
+
+function goOffline() {
+    fetch("http://127.0.0.1:5000/api/driver_offline", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({driver_id: driverId})
+    });
+
+    document.getElementById("status").innerText = "Offline";
+}
+
+function startPolling() {
+    setInterval(() => {
+        fetch("http://127.0.0.1:5000/api/available_rides")
+            .then(r => r.json())
+            .then(list => renderRides(list));
+    }, 3000);
+}
+
+function renderRides(list) {
+    const box = document.getElementById("rides");
+    box.innerHTML = "";
+
+    list.forEach(ride => {
+        const div = document.createElement("div");
+        div.className = "rideBox";
+
+        div.innerHTML = `
+            <p><b>${ride.ride_id}</b></p>
+            <p>Pickup: ${ride.pickup_address}</p>
+            <p>Dropoff: ${ride.dropoff_address}</p>
+            <button onclick="accept('${ride.ride_id}')">Accept</button>
+            <button onclick="decline('${ride.ride_id}')">Decline</button>
+        `;
+        box.appendChild(div);
+    });
+}
+
+function accept(id) {
+    fetch("http://127.0.0.1:5000/api/accept_ride", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ride_id: id, driver_id: driverId})
+    });
+}
+
+function decline(id) {
+    fetch("http://127.0.0.1:5000/api/decline_ride", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ride_id: id, driver_id: driverId})
+    });
+}
+</script>
+
+</body>
+</html>
