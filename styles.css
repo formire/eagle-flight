@@ -1,0 +1,106 @@
+/* -------------------
+   I don't have much experience with CSS, so I had some help from YouTube and ChatGPT for this part
+------------------- */
+
+/* -------------------
+   Base Styles
+------------------- */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color: #0a3d62; /* Dark UNT green */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #005847; /* UNT primary green */
+}
+
+/* -------------------
+   Card Layout
+------------------- */
+.card {
+    background-color: #ffffff;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #005847;
+    text-align: center;
+}
+
+/* -------------------
+   Inputs
+------------------- */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #00b140; /* UNT accent green */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,177,64,0.3);
+}
+
+/* -------------------
+   Buttons
+------------------- */
+button {
+    background-color: #005847;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #00b140;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* -------------------
+   Status & Output
+------------------- */
+#rideOutput {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#finishBtn {
+    background-color: #00b140;
+    margin-top: 10px;
+}
+
+/* -------------------
+   Misc
+------------------- */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
